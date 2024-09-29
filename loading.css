@@ -1,0 +1,16 @@
+.loader-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff; /* Background color during loading */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999; /* Make sure it's on top of everything */
+}
+
+.content {
+    display: none; /* Hidden until loaded */
+}

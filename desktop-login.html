@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myEditBuddy Login</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Common Styles -->
+    <link rel="stylesheet" href="login.css"> <!-- Login-specific Styles -->
+    <link rel="stylesheet" href="loading.css"> <!-- Loading Styles -->
+    <link rel="stylesheet" href="mobile.css"> <!-- Mobile Styles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script> <!-- Lottie Web Player -->
+</head>
+<body>
+
+    <!-- Loading Screen with Lottie -->
+    <div id="lottie-loader" class="loader-wrapper"></div>
+
+    <!-- Main Content -->
+    <div class="content" style="display: none;"> <!-- Hidden by default -->
+
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="email">
+                <!-- Envelope Icon and Email Link -->
+                <img src="https://i.ibb.co/ySKrfjQ/envelope.png" alt="envelope" width="16" height="16">
+                <a href="mailto:info@editbuddy.co.za?subject=I have an enquiry" class="email-link">info@editbuddy.co.za</a>
+            </div>
+            <div class="top-bar-buttons">
+                <button class="btn" onclick="location.href='myEditBuddy.html'">
+                    <img src="https://i.ibb.co/ypRGKd0/arrow-left-to-arc.png" alt="myEditBuddy icon" width="16" height="16">
+                    myEditBuddy
+                </button>
+                <button class="btn" onclick="location.href='contact-us.html'">Contact Us</button>
+            </div>
+        </div>
+
+        <!-- Login Section with two columns: image on left, login on right -->
+        <section class="login-section">
+            <!-- Left Image Section with black border -->
+            <div class="left-section">
+                <img src="https://i.ibb.co/PQnYSD3/image.png" alt="Login Image">
+            </div>
+
+            <!-- Right Login Section -->
+            <div class="right-section">
+                <!-- Login Header with Icon -->
+                <div class="login-header">
+                    <img src="https://i.ibb.co/ypRGKd0/arrow-left-to-arc.png" alt="arrow-left-to-arc" width="24" height="24">
+                    <h1>Login</h1>
+                </div>
+                
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="https://i.ibb.co/cwhcXGD/EDITBUDDY-1-removebg-preview.png" alt="EditBuddy Logo" width="150">
+                </div>
+
+                <!-- Login Form -->
+                <form id="loginForm" onsubmit="login(event)"> <!-- Link to login function in auth.js -->
+                    <input type="text" id="username" placeholder="Username" required> <!-- Added id="username" -->
+                    <input type="password" id="password" placeholder="Password" required> <!-- Added id="password" -->
+                    <label>
+                        <input type="checkbox" id="rememberMe"> Remember me
+                    </label>
+                    <button type="submit" class="formbtn">Login</button>
+
+                    <!-- Error message display -->
+                    <p id="error-msg" style="color: red;"></p>
+
+                    <!-- Links for Forgot Password and Sign Up -->
+                    <div class="link-container">
+                        <a href="forgot-password.html">Forgot password?</a>
+                        <a href="signup.html">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JavaScript for Lottie Loader -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loaderElement = document.getElementById('lottie-loader');
+            const contentElement = document.querySelector('.content');
+
+            lottie.loadAnimation({
+                container: loaderElement,
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://lottie.host/79666e07-c7ba-48e9-8c8f-4555c8e387d6/worGPr1Yfv.json'
+            });
+
+            window.addEventListener('load', function () {
+                setTimeout(function () {
+                    loaderElement.style.display = 'none';
+                    contentElement.style.display = 'block';
+                }, 1000);
+            });
+        });
+        
+    </script>
+
+</body>
+<script src="auth.js" defer></script> <!-- Link the auth script -->
+</html>

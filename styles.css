@@ -1,0 +1,74 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Top bar */
+.top-bar {
+    background-color: #ffbd59;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.top-bar .email {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.top-bar .email img {
+    margin-right: 8px;
+}
+
+.top-bar .email-link {
+    color: white;
+    text-decoration: none;
+}
+
+.top-bar .email-link:hover {
+    text-decoration: underline;
+}
+
+/* Top Bar Buttons */
+.top-bar .top-bar-buttons {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+/* Buttons */
+.btn {
+    background-color: white;
+    color: #ffbd59;
+    border: 2px solid #ffbd59; /* Adding a border */
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn img {
+    margin-right: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(2px); /* Slightly "raise" the button on hover */
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+    .top-bar .top-bar-buttons {
+        display: none; /* Hide the buttons in the top bar on mobile */
+    }
+}

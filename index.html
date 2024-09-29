@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EditBuddy</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Common Styles -->
+    <link rel="stylesheet" href="homepage.css"> <!-- Homepage Styles -->
+    <link rel="stylesheet" href="mobile.css"> <!-- Mobile Styles -->
+    <link rel="stylesheet" href="loading.css"> <!-- Loading Styles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script> <!-- Lottie Web Player -->
+    <link rel="icon" href="https://i.ibb.co/TwkwS0D/EDITBUDDY-3-removebg-preview.png" type="image/png">
+
+</head>
+<body>
+
+    <!-- Loading Screen with Lottie -->
+    <div id="lottie-loader" class="loader-wrapper"></div>
+
+    <!-- Main Content -->
+    <div class="content" style="display: none;"> <!-- Hidden by default -->
+
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="email">
+                <!-- Envelope Icon and Email Link -->
+                <img src="https://i.ibb.co/ySKrfjQ/envelope.png" alt="envelope" width="16" height="16">
+                <a href="mailto:info@editbuddy.co.za?subject=I have an enquiry" class="email-link">info@editbuddy.co.za</a>
+            </div>
+            <div class="top-bar-buttons">
+                <button class="btn" onclick="location.href='login.html'">
+                    <img src="https://i.ibb.co/ypRGKd0/arrow-left-to-arc.png" alt="myEditBuddy icon" width="16" height="16">
+                    myEditBuddy
+                </button>
+                <button class="btn" onclick="location.href='contact-us.html'">Contact Us</button>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://i.ibb.co/cwhcXGD/EDITBUDDY-1-removebg-preview.png" alt="EditBuddy Logo" width="150">
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div> <!-- Hamburger icon with bars -->
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">myEditBuddy</a>
+            </div>
+        </nav>
+
+        <!-- Image section with overlapping containers -->
+        <section class="image-section">
+            <div class="container-wrapper">
+                <div class="container">
+                    <h2>Business Owners</h2>
+                    <p>We got you covered.</p>
+                </div>
+                <div class="container">
+                    <h2>Freelancers</h2>
+                    <p>Streamline your projects.</p>
+                </div>
+                <div class="container">
+                    <h2>Startups</h2>
+                    <p>Launch your next big idea.</p>
+                </div>
+                <div class="container">
+                    <h2>Non-Profits</h2>
+                    <p>Make an impact with ease.</p>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <!-- Services Section -->
+<!-- Services Section -->
+<section class="services">
+    <h2>Our Services</h2>
+    <div class="services-list">
+        <!-- Service 1 -->
+        <div class="service">
+            <img src="https://i.ibb.co/KrdF7L2/cart-shopping-fast.png" alt="Service Icon" class="service-icon">
+            <h3>Website Creation</h3>
+            <p>We create responsive and visually appealing websites that cater to your business needs.</p>
+            <button class="more-btn" onclick="openModal('service1Modal')">More</button>
+        </div>
+        <hr class="service-divider">
+
+        <!-- Modal for Service 1 -->
+        <div id="service1Modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('service1Modal')">&times;</span>
+                <h3>Website Creation</h3>
+                <p>Our website creation service focuses on building dynamic, responsive, and user-friendly websites that align with your business goals.</p>
+            </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service">
+            <img src="https://i.ibb.co/0qPvXSZ/wallet-1.png" alt="Service Icon" class="service-icon">
+            <h3>Graphics and Design</h3>
+            <p>We offer professional graphic design services, including logos, business cards, and marketing materials.</p>
+            <button class="more-btn" onclick="openModal('service2Modal')">More</button>
+        </div>
+        <hr class="service-divider">
+
+        <!-- Modal for Service 2 -->
+        <div id="service2Modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('service2Modal')">&times;</span>
+                <h3>Graphics and Design</h3>
+                <p>Our graphics and design team will craft visually stunning and on-brand marketing materials to help your business stand out.</p>
+            </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service">
+            <img src="https://i.ibb.co/9YNk92K/piggy-bank.png" alt="Service Icon" class="service-icon">
+            <h3>Brand Creation</h3>
+            <p>We help businesses establish a strong and memorable brand identity, from logos to brand strategy.</p>
+            <button class="more-btn" onclick="openModal('service3Modal')">More</button>
+        </div>
+
+        <!-- Modal for Service 3 -->
+        <div id="service3Modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('service3Modal')">&times;</span>
+                <h3>Brand Creation</h3>
+                <p>Our brand creation service helps businesses establish a strong and recognizable brand identity with a consistent strategy.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials-container">
+        <!-- Testimonial 1 -->
+        <div class="testimonial">
+            <div class="testimonial-quote">
+                <p>"EditBuddy helped streamline our editing process, and the results were excellent! We couldn't be happier with the service."</p>
+            </div>
+            <div class="testimonial-profile">
+                <img src="https://i.ibb.co/SXLzWzs/user-trust.png" alt="User Profile" class="profile-pic">
+                <div class="client-info">
+                    <h3>Gerhard van der Merwe</h3>
+                    <span class="client-role">Business Owner</span>
+                </div>
+            </div>
+            <div class="star-rating">
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9734;</span>
+            </div>
+        </div>
+        <!-- Testimonial 2 (Afrikaans) -->
+        <div class="testimonial">
+            <div class="testimonial-quote">
+                <p>"Die EditBuddy-span was uiters professioneel en het ons inhoud foutloos en betyds afgelewer. Ons sal beslis weer van hul dienste gebruik maak!"</p>
+            </div>
+            <div class="testimonial-profile">
+                <img src="https://i.ibb.co/SXLzWzs/user-trust.png" alt="User Profile" class="profile-pic">
+                <div class="client-info">
+                    <h3>Annemarie Jacobs</h3>
+                    <span class="client-role">Startup Founder</span>
+                </div>
+            </div>
+            <div class="star-rating">
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+            </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="testimonial">
+            <div class="testimonial-quote">
+                <p>"The service provided by EditBuddy was top-notch. They paid attention to every detail and ensured that our project was delivered with precision."</p>
+            </div>
+            <div class="testimonial-profile">
+                <img src="https://i.ibb.co/SXLzWzs/user-trust.png" alt="User Profile" class="profile-pic">
+                <div class="client-info">
+                    <h3>Pieter Botha</h3>
+                    <span class="client-role">Freelancer</span>
+                </div>
+            </div>
+            <div class="star-rating">
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9734;</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <p>What services does EditBuddy offer?</p>
+                <img src="https://i.ibb.co/S5DqhTK/dropdown-select.png" alt="dropdown-icon" class="dropdown-icon">
+            </div>
+            <div class="faq-answer">
+                <p>EditBuddy specializes in website development, graphic design, and event branding. We offer customized solutions to help your business or event stand out with high-quality designs and fully responsive websites.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <p>How long does it take to create a website or design?</p>
+                <img src="https://i.ibb.co/S5DqhTK/dropdown-select.png" alt="dropdown-icon" class="dropdown-icon">
+            </div>
+            <div class="faq-answer">
+                <p>The timeline depends on the complexity of the project. A basic website design typically takes 1-2 weeks, while more complex projects with custom features may take longer. We'll provide a detailed timeline after discussing your project.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <p>What information do you need to start a project?</p>
+                <img src="https://i.ibb.co/S5DqhTK/dropdown-select.png" alt="dropdown-icon" class="dropdown-icon">
+            </div>
+            <div class="faq-answer">
+                <p>To start your project, we need details about your business or event, the type of design or website you're looking for, and any specific elements you'd like to include (such as logos, branding guidelines, or color schemes). We’ll guide you through the process to make sure we capture your vision.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <p>Do you provide support after the project is completed?</p>
+                <img src="https://i.ibb.co/S5DqhTK/dropdown-select.png" alt="dropdown-icon" class="dropdown-icon">
+            </div>
+            <div class="faq-answer">
+                <p>Yes, we provide ongoing support and maintenance to ensure that your website or design continues to perform optimally. We also offer additional services like updates, redesigns, and assistance with new features.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <p>What is the cost of your services?</p>
+                <img src="https://i.ibb.co/S5DqhTK/dropdown-select.png" alt="dropdown-icon" class="dropdown-icon">
+            </div>
+            <div class="faq-answer">
+                <p>Our pricing varies based on the scope of the project. Website designs start at R1250, and branding or graphic design services are priced based on the complexity and number of deliverables. We’ll provide a custom quote after reviewing your needs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <p><a href="mailto:info@editbuddy.co.za">info@editbuddy.co.za</a></p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-globe"></i>
+          <p><a href="https://editbuddy.co.za" target="_blank">editbuddy.co.za</a></p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <p><a href="tel:0662167896">0662167896</a></p>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3>Socials</h3>
+          <ul>
+            <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li><a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i> Tiktok</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Accessibility</h3>
+          <ul>
+            <li><a href="#"><i class="fas fa-universal-access"></i> Accessibility Options</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Language</h3>
+          <ul>
+            <li><a href="#" id="afrikaans"><img src="https://flagcdn.com/w20/za.png" class="flag-icon" alt="Afrikaans Flag"> Afrikaans</a></li>
+            <li><a href="#" id="english"><img src="https://flagcdn.com/w20/gb.png" class="flag-icon" alt="English Flag"> English</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="footer-copyright">
+        <p>&copy; 2024 EditBuddy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Font Awesome CDN Link -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  
+    
+
+    <!-- JavaScript for Lottie Loader and Menu -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const menuToggle = document.querySelector('.menu-toggle');
+
+            // Toggle active class for menu and icon
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('change');
+        }
+
+        // Loading screen with Lottie animation from hosted link
+        document.addEventListener("DOMContentLoaded", function () {
+            const loaderElement = document.getElementById('lottie-loader');
+            const contentElement = document.querySelector('.content');
+
+            // Initialize Lottie animation using the hosted JSON link
+            lottie.loadAnimation({
+                container: loaderElement, // the DOM element to render the animation
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://lottie.host/79666e07-c7ba-48e9-8c8f-4555c8e387d6/worGPr1Yfv.json' // Hosted Lottie JSON link
+            });
+
+            // Hide loader and show content after page load
+            window.addEventListener('load', function () {
+                setTimeout(function () {
+                    loaderElement.style.display = 'none';  // Hide the loader
+                    contentElement.style.display = 'block';  // Show the content
+                }, 1000);  // 1-second fake delay
+            });
+        });
+            // Function to open modal
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'flex';
+    }
+
+    // Function to close modal
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+
+    // Close modal if user clicks outside the modal-content
+    window.onclick = function(event) {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+    document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', function () {
+        const faqItem = this.parentElement;
+
+        // Toggle active class
+        faqItem.classList.toggle('active');
+
+        // Adjust answer height
+        const answer = faqItem.querySelector('.faq-answer');
+        if (faqItem.classList.contains('active')) {
+            answer.style.height = answer.scrollHeight + 'px';
+        } else {
+            answer.style.height = '0px';
+        }
+    });
+});
+    </script>
+
+</body>
+</html>

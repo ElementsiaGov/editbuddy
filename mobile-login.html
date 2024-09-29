@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Login</title>
+    <link rel="stylesheet" href="mobile-login.css">
+    <link rel="stylesheet" href="loading.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script> <!-- Lottie Web Player -->
+</head>
+<body>
+
+    <!-- Loading Screen with Lottie -->
+    <div id="lottie-loader" class="loader-wrapper"></div>
+
+    <!-- Main Content -->
+    <div class="content" style="display: none;"> <!-- Hidden by default -->
+
+        <!-- Top Bar with Email only -->
+        <div class="top-bar">
+            <div class="email">
+                <img src="https://i.ibb.co/ySKrfjQ/envelope.png" alt="envelope" width="16" height="16">
+                <a href="mailto:info@editbuddy.co.za?subject=I have an enquiry" class="email-link">info@editbuddy.co.za</a>
+            </div>
+        </div>
+
+        <!-- Mobile Login Section with Background Image -->
+        <div class="mobile-login-section">
+            <div class="login-container">
+                <!-- Login Header with Icon -->
+                <div class="login-header">
+                    <img src="https://i.ibb.co/ypRGKd0/arrow-left-to-arc.png" alt="arrow-left-to-arc" width="24" height="24">
+                    <h1>Login</h1>
+                </div>
+
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="https://i.ibb.co/cwhcXGD/EDITBUDDY-1-removebg-preview.png" alt="EditBuddy Logo" width="150">
+                </div>
+
+                <!-- Login Form -->
+                <form id="loginForm" onsubmit="login(event)"> <!-- Link to auth.js login function -->
+                    <input type="text" id="username" placeholder="Username" required> <!-- Added id="username" -->
+                    <input type="password" id="password" placeholder="Password" required> <!-- Added id="password" -->
+                    <label>
+                        <input type="checkbox" id="rememberMe"> Remember me
+                    </label>
+                    <button type="submit" class="formbtn">Login</button>
+
+                    <!-- Error message display -->
+                    <p id="error-msg" style="color: red;"></p>
+
+                    <!-- Forgot Password and Sign Up Links -->
+                    <div class="link-container">
+                        <a href="forgot-password.html">Forgot password?</a>
+                        <a href="signup.html">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JavaScript for Lottie Loader -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loaderElement = document.getElementById('lottie-loader');
+            const contentElement = document.querySelector('.content');
+
+            // Lottie loader animation
+            lottie.loadAnimation({
+                container: loaderElement,
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://lottie.host/79666e07-c7ba-48e9-8c8f-4555c8e387d6/worGPr1Yfv.json' // Example Lottie animation
+            });
+
+            // Show content after the loader
+            window.addEventListener('load', function () {
+                setTimeout(function () {
+                    loaderElement.style.display = 'none'; // Hide loader
+                    contentElement.style.display = 'block'; // Show content
+                }, 1000); // Loader duration
+            });
+        });
+    </script>
+
+</body>
+<script src="auth.js" defer></script> <!-- Link the auth script -->
+</html>

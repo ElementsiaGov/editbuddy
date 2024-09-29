@@ -1,0 +1,123 @@
+/* General Login Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Login Section: Two-column layout */
+.login-section {
+    display: flex;
+    height: 100vh;
+}
+
+/* Left Section for Image with Dashed Yellow Border */
+.left-section {
+    flex: 1;
+    background-image: url('https://i.ibb.co/PQnYSD3/image.png');
+    background-size: cover;
+    background-position: center;
+    border-right: 2px dashed #ffbd59; /* Yellow dashed border */
+}
+
+/* Right Section for Login - Now Narrower */
+.right-section {
+    flex: 0.35;  /* Narrowed from 0.5 to 0.35 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: white;
+}
+
+/* Login Header with Icon */
+.login-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-header h1 {
+    font-size: 32px;
+    color: #ffbd59; /* Yellow for the heading */
+    margin-left: 10px;
+}
+
+/* Logo */
+.logo {
+    margin-bottom: 20px;
+}
+
+/* Login Form */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px; /* Slightly narrower to fit with the narrower layout */
+}
+
+/* Styled Input Fields to Match the Screenshot */
+form input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;  /* Rounded corners */
+    font-size: 16px;
+    background-color: #fff; /* White background */
+    box-shadow: none; /* No shadow */
+    transition: border 0.3s ease;
+}
+
+form input:focus {
+    border-color: #ccc; /* Light border on focus */
+    outline: none;
+}
+
+/* Styled Checkbox Label */
+form label {
+    margin-bottom: 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: #1e3d7c; /* Blue text for "Remember me" */
+}
+
+/* Button Matching the Screenshot */
+.formbtn {
+    background-color: #ffbd59; /* Yellow background for the button */
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px; /* Rounded corners */
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.formbtn:hover {
+   background-color: #d79a3f; /* Slightly darker yellow on hover */
+}
+
+/* Forgot Password and Sign Up Links Styled */
+form .link-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #4d4d4d; /* Light black for the links */
+    font-size: 14px;
+}
+
+/* Remove blue color and underline from links */
+form .link-container a {
+    color: #4d4d4d; /* Light black */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+form .link-container a:hover {
+    color: #1e3d7c; /* Hover effect - blue text */
+}

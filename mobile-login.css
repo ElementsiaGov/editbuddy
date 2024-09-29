@@ -1,0 +1,145 @@
+/* General Mobile Page Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Top Bar - Email aligned to the left */
+.top-bar {
+    background-color: #ffbd59;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+}
+
+.email img {
+    margin-right: 8px;
+}
+
+.email-link {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Full-screen background image */
+.mobile-login-section {
+    background-image: url('https://i.ibb.co/PQnYSD3/image.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Full height */
+    height: calc(100% - 50px); /* Account for the top bar height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+
+/* Login container with side margins */
+.login-container {
+    background-color: rgb(255, 255, 255); /* Semi-transparent white */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 350px;
+    width: 100%;
+    margin: 0 20px; /* Margins on the sides */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Login Header with Icon */
+.login-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-header h1 {
+    font-size: 28px;
+    color: #ffbd59;
+    margin-left: 10px;
+}
+
+/* Logo */
+.logo {
+    margin-bottom: 20px;
+}
+
+/* Login Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styled Input Fields */
+form input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: none;
+    transition: border 0.3s ease;
+}
+
+form input:focus {
+    border-color: #ccc;
+    outline: none;
+}
+
+/* Styled Checkbox Label */
+form label {
+    margin-bottom: 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: #1e3d7c;
+}
+
+/* Button */
+.formbtn {
+    background-color: #ffbd59;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.formbtn:hover {
+   background-color: #d79a3f;
+}
+
+/* Forgot Password and Sign Up Links */
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #4d4d4d;
+    font-size: 14px;
+}
+
+.link-container a {
+    color: #4d4d4d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-container a:hover {
+    color: #1e3d7c;
+}

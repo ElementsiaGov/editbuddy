@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Order Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="email">
+            <img src="https://i.ibb.co/ySKrfjQ/envelope.png" alt="envelope" width="16" height="16">
+            <a href="mailto:info@editbuddy.co.za?subject=I have an enquiry" class="email-link">info@editbuddy.co.za</a>
+        </div>
+        <div class="top-bar-buttons">
+            <button class="btn logout-btn" onclick="logout()">
+                <img src="https://i.ibb.co/gTHQ35T/arrow-left-from-arc.png" alt="logout-icon" width="16" height="16">
+                Log Out
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Dashboard Container -->
+    <div class="dashboard-container">
+
+        <!-- Logo in the Main Container -->
+        <div class="logo">
+            <img src="https://i.ibb.co/cwhcXGD/EDITBUDDY-1-removebg-preview.png" alt="EditBuddy Logo" width="150">
+        </div>
+
+        <!-- Order Details with Progress Bar -->
+        <div class="order-info">
+            <h2>Order #402-3209368-6387513</h2>
+            <p>Product: Gillette Shaver and 4 more items</p>
+            <p>Order Date: Oct 10, 2024</p>
+            <p>Invoice: <a href="#" id="invoice-link">Download Invoice</a></p>
+
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 50%;"></div> <!-- Example of 50% complete -->
+                </div>
+                <div class="progress-points">
+                    <div class="progress-point">Order Received</div>
+                    <div class="progress-point">Order Paid</div>
+                    <div class="progress-point">Order Shipped</div>
+                    <div class="progress-point">Order Delivered</div>
+                </div>
+            </div>
+            <p><span id="progress-percentage">50%</span> Complete</p>
+        </div>
+
+        <!-- View Details Heading -->
+        <h2 class="details-heading">View Details</h2>
+
+        <!-- Icon Buttons in Columns with Grey Divider Lines -->
+        <div class="icon-buttons">
+            <div class="icon-column">
+                <img src="https://i.ibb.co/1Q0RTQr/safe-box.png" alt="Payments" class="icon-btn" onclick="openModal('paymentsModal')" width="60" height="60">
+            </div>
+            <div class="icon-column grey-divider">
+                <img src="https://i.ibb.co/KrdF7L2/cart-shopping-fast.png" alt="Order Details" class="icon-btn" onclick="openModal('orderDetailsModal')" width="60" height="60">
+            </div>
+            <div class="icon-column">
+                <img src="https://i.ibb.co/SXLzWzs/user-trust.png" alt="Customer Account" class="icon-btn" onclick="openModal('customerModal')" width="60" height="60">
+            </div>
+        </div>
+
+        <!-- Modals -->
+
+        <!-- Payments Modal -->
+        <div id="paymentsModal" class="modal" onclick="closeModalOutside(event)">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('paymentsModal')">&times;</span>
+                <h2>Payment Details</h2>
+                <p><strong>Amount Due:</strong> $200</p>
+                <p><strong>Status:</strong> Paid</p>
+                <p><strong>Date:</strong> Oct 15, 2024</p>
+            </div>
+        </div>
+
+        <!-- Order Details Modal -->
+        <div id="orderDetailsModal" class="modal" onclick="closeModalOutside(event)">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('orderDetailsModal')">&times;</span>
+                <h2>Order Details</h2>
+                <p><strong>Order Code:</strong> ORD12345</p>
+                <p><strong>Status:</strong> Shipped</p>
+                <p><strong>Order Date:</strong> Oct 10, 2024</p>
+            </div>
+        </div>
+
+        <!-- Customer Details Modal -->
+        <div id="customerModal" class="modal" onclick="closeModalOutside(event)">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('customerModal')">&times;</span>
+                <h2>Customer Information</h2>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Address:</strong> 123 Main St, City, Country</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
