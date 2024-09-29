@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="wb:op" content="ece2229a7c45c69d98d9e189e0789c29"/>
     <title>EditBuddy</title>
     <link rel="stylesheet" href="styles.css"> <!-- Common Styles -->
     <link rel="stylesheet" href="homepage.css"> <!-- Homepage Styles -->
@@ -86,60 +85,34 @@
 <section class="services">
     <h2>Our Services</h2>
     <div class="services-list">
-        <!-- Service 1 -->
+        <!-- Service 1: Website Creation -->
         <div class="service">
             <img src="https://i.ibb.co/KrdF7L2/cart-shopping-fast.png" alt="Service Icon" class="service-icon">
             <h3>Website Creation</h3>
             <p>We create responsive and visually appealing websites that cater to your business needs.</p>
-            <button class="more-btn" onclick="openModal('service1Modal')">More</button>
+            <a href="services.html#website-creation" class="more-btn">More</a> <!-- Updated to link to the services page -->
         </div>
         <hr class="service-divider">
 
-        <!-- Modal for Service 1 -->
-        <div id="service1Modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('service1Modal')">&times;</span>
-                <h3>Website Creation</h3>
-                <p>Our website creation service focuses on building dynamic, responsive, and user-friendly websites that align with your business goals.</p>
-            </div>
-        </div>
-
-        <!-- Service 2 -->
+        <!-- Service 2: Graphics and Design -->
         <div class="service">
             <img src="https://i.ibb.co/0qPvXSZ/wallet-1.png" alt="Service Icon" class="service-icon">
             <h3>Graphics and Design</h3>
             <p>We offer professional graphic design services, including logos, business cards, and marketing materials.</p>
-            <button class="more-btn" onclick="openModal('service2Modal')">More</button>
+            <a href="services.html#graphics-design" class="more-btn">More</a> <!-- Updated to link to the services page -->
         </div>
         <hr class="service-divider">
 
-        <!-- Modal for Service 2 -->
-        <div id="service2Modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('service2Modal')">&times;</span>
-                <h3>Graphics and Design</h3>
-                <p>Our graphics and design team will craft visually stunning and on-brand marketing materials to help your business stand out.</p>
-            </div>
-        </div>
-
-        <!-- Service 3 -->
+        <!-- Service 3: Brand Creation -->
         <div class="service">
             <img src="https://i.ibb.co/9YNk92K/piggy-bank.png" alt="Service Icon" class="service-icon">
             <h3>Brand Creation</h3>
             <p>We help businesses establish a strong and memorable brand identity, from logos to brand strategy.</p>
-            <button class="more-btn" onclick="openModal('service3Modal')">More</button>
-        </div>
-
-        <!-- Modal for Service 3 -->
-        <div id="service3Modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('service3Modal')">&times;</span>
-                <h3>Brand Creation</h3>
-                <p>Our brand creation service helps businesses establish a strong and recognizable brand identity with a consistent strategy.</p>
-            </div>
+            <a href="services.html#brand-creation" class="more-btn">More</a> <!-- Updated to link to the services page -->
         </div>
     </div>
 </section>
+
 
 
 <!-- Testimonials Section -->
@@ -267,6 +240,26 @@
         </div>
     </div>
 </section>
+<!-- Our Partners Section -->
+<section class="partners">
+    <h2>Our Partners</h2>
+    <div class="partners-list">
+        <!-- Partner 1: PayFast -->
+        <div class="partner" style="--shadow-color: #e6d576;">
+            <img src="https://payfast.io/wp-content/uploads/2022/12/Payfast-logo-v2.jpg" alt="PayFast Logo" class="partner-logo">
+        </div>
+
+        <!-- Partner 2: Regte -->
+        <div class="partner" style="--shadow-color: #007bff;">
+            <img src="https://i.ibb.co/2Yzr9yK/Regte-Logo-removebg-preview.png" alt="Regte Logo" class="partner-logo">
+        </div>
+
+        <!-- Partner 3: FNB -->
+        <div class="partner" style="--shadow-color: #add8e6;">
+            <img src="https://th.bing.com/th/id/OIP.8lKyoE5J-ahX9AyqZXZjMwHaEK?rs=1&pid=ImgDetMain" alt="FNB Logo" class="partner-logo">
+        </div>
+    </div>
+</section>
 
 
 <!-- Footer Section -->
@@ -355,25 +348,26 @@
                 }, 1000);  // 1-second fake delay
             });
         });
-            // Function to open modal
-    function openModal(modalId) {
-        document.getElementById(modalId).style.display = 'flex';
-    }
+// Function to open the correct modal
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = 'flex';
+}
 
-    // Function to close modal
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = 'none';
-    }
+// Function to close the modal
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = 'none';
+}
 
-    // Close modal if user clicks outside the modal-content
-    window.onclick = function(event) {
-        const modals = document.querySelectorAll('.modal');
-        modals.forEach(modal => {
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        });
+// Close the modal if the user clicks outside the modal-content
+window.onclick = function(event) {
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
     }
+  });
+};
+
     document.querySelectorAll('.faq-question').forEach(question => {
     question.addEventListener('click', function () {
         const faqItem = this.parentElement;
