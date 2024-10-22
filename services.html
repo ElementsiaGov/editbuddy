@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Common Styles -->
+    <link rel="stylesheet" href="homepage.css"> <!-- Homepage Styles -->
+    <link rel="stylesheet" href="loading.css"> <!-- Loading Styles -->
+    <link rel="stylesheet" href="services.css"> <!-- Services Styles -->
+    <link rel="stylesheet" href="mobile.css"> <!-- Services Styles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script> <!-- Lottie Web Player -->
+    <link rel="icon" href="https://i.ibb.co/TwkwS0D/EDITBUDDY-3-removebg-preview.png" type="image/png">
+</head>
+<body>
+    <!-- Loading Screen with Lottie -->
+    <div id="lottie-loader" class="loader-wrapper"></div>
+
+    <!-- Main Content -->
+    <div class="content" style="display: none;">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="email">
+                <img src="https://i.ibb.co/ySKrfjQ/envelope.png" alt="envelope" width="16" height="16">
+                <a href="mailto:info@editbuddy.co.za" class="email-link">info@editbuddy.co.za</a>
+            </div>
+            <div class="top-bar-buttons">
+                <button class="btn" onclick="location.href='login.html'">
+                    <img src="https://i.ibb.co/ypRGKd0/arrow-left-to-arc.png" alt="myEditBuddy icon" width="16" height="16">
+                    myEditBuddy
+                </button>
+                <button class="btn" onclick="location.href='contact-us.html'">Contact Us</button>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://i.ibb.co/cwhcXGD/EDITBUDDY-1-removebg-preview.png" alt="EditBuddy Logo" width="150">
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div> <!-- Hamburger icon with bars -->
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">myEditBuddy</a>
+            </div>
+        </nav>
+
+        <!-- Full-width Header Image -->
+        <header class="header-image">
+            <img src="https://th.bing.com/th/id/R.11e6503716dff977c115253dd283c0bd?rik=XJCW6F2epuvTyw&pid=ImgRaw&r=0" alt="Header Image">
+        </header>
+        <section class="services-overview">
+            <h2>An Overview</h2>
+            <div class="services-container">
+                <!-- Service Box 1 -->
+                <div class="service-box" style="background-color: #f5c6aa;">
+                    <img src="https://i.ibb.co/qybQYpx/ui-design.png" alt="Custom Website Design Icon" class="service-icon">
+                    <h3>Custom Website Design</h3>
+                    <p>We create unique, fully customized websites that reflect your brand’s identity. Our designs are tailored to fit your business needs, ensuring a professional and visually appealing online presence.</p>
+                    <a href="quote.html" class="quote-btn" style="--btn-bg: #f5c6aa; --hover-bg: #e6956a;">
+                        <img src="https://i.ibb.co/k3tn8FH/angle-circle-left.png" alt="quote icon" class="quote-icon"> Get a Quote
+                    </a>
+                </div>
+        
+                <!-- Service Box 2 -->
+                <div class="service-box" style="background-color: #c2e59c;">
+                    <img src="https://i.ibb.co/2S1fXrr/maintenance-support.png" alt="Website Maintenance Icon" class="service-icon">
+                    <h3>Website Maintenance and Updates</h3>
+                    <p>We offer ongoing website support, ensuring your site stays updated, secure, and running smoothly. This includes regular backups, software updates, and performance optimizations.</p>
+                    <a href="quote.html" class="quote-btn" style="--btn-bg: #c2e59c; --hover-bg: #8fc94a;">
+                        <img src="https://i.ibb.co/k3tn8FH/angle-circle-left.png" alt="quote icon" class="quote-icon"> Get a Quote
+                    </a>
+                </div>
+        
+                <!-- Service Box 3 -->
+                <div class="service-box" style="background-color: #ffec99;">
+                    <img src="https://i.ibb.co/FsJ5J1g/e-commerce-market.png" alt="E-commerce Solutions Icon" class="service-icon">
+                    <h3>E-commerce Solutions</h3>
+                    <p>We design and develop secure and scalable online stores, providing a smooth shopping experience for your customers and integrated payment gateways for seamless transactions.</p>
+                    <a href="quote.html" class="quote-btn" style="--btn-bg: #ffec99; --hover-bg: #ffd966;">
+                        <img src="https://i.ibb.co/k3tn8FH/angle-circle-left.png" alt="quote icon" class="quote-icon"> Get a Quote
+                    </a>
+                </div>
+        
+                <!-- Service Box 4 -->
+                <div class="service-box" style="background-color: #bac8ff;">
+                    <img src="https://i.ibb.co/qr8TYb9/digital-marketing-1.png" alt="Digital Marketing Icon" class="service-icon">
+                    <h3>Digital Marketing</h3>
+                    <p>We provide tailored digital marketing strategies to ensure your business reaches the right audience, with a focus on SEO, PPC, and social media marketing.</p>
+                    <a href="quote.html" class="quote-btn" style="--btn-bg: #bac8ff; --hover-bg: #889dfd;">
+                        <img src="https://i.ibb.co/k3tn8FH/angle-circle-left.png" alt="quote icon" class="quote-icon"> Get a Quote
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action Section -->
+        <section class="cta-section" style="background-color: #333; color: white; padding: 40px 20px; text-align: center; margin-top: 40px;">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let’s work together to create something great. Get your personalized quote now!</p>
+            <a href="quote.html" class="cta-btn" style="background-color: #ffbd59; padding: 12px 25px; color: #333; border-radius: 25px; text-decoration: none; font-size: 18px;">
+                <img src="https://i.ibb.co/k3tn8FH/angle-circle-left.png" alt="quote icon" class="quote-icon" style="margin-right: 10px; width: 20px;"> Get a Quote
+            </a>
+        </section>
+        
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:info@editbuddy.co.za">info@editbuddy.co.za</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <p><a href="https://editbuddy.co.za" target="_blank">editbuddy.co.za</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p><a href="tel:0662167896">0662167896</a></p>
+                    </div>
+                </div>
+                <hr class="divider">
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Socials</h3>
+                        <ul>
+                            <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i> Tiktok</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Accessibility</h3>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-universal-access"></i> Accessibility Options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Language</h3>
+                        <ul>
+                            <li><a href="#" id="afrikaans"><img src="https://flagcdn.com/w20/za.png" class="flag-icon" alt="Afrikaans Flag"> Afrikaans</a></li>
+                            <li><a href="#" id="english"><img src="https://flagcdn.com/w20/gb.png" class="flag-icon" alt="English Flag"> English</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="divider">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 EditBuddy. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Lottie Loader and Menu -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const menuToggle = document.querySelector('.menu-toggle');
+
+            // Toggle active class for menu and icon
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('change');
+        }
+
+        // Loading screen with Lottie animation from hosted link
+        document.addEventListener("DOMContentLoaded", function () {
+            const loaderElement = document.getElementById('lottie-loader');
+            const contentElement = document.querySelector('.content');
+
+            // Initialize Lottie animation using the hosted JSON link
+            lottie.loadAnimation({
+                container: loaderElement, // the DOM element to render the animation
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://lottie.host/79666e07-c7ba-48e9-8c8f-4555c8e387d6/worGPr1Yfv.json' // Hosted Lottie JSON link
+            });
+
+            // Hide loader and show content after page load
+            window.addEventListener('load', function () {
+                setTimeout(function () {
+                    loaderElement.style.display = 'none';  // Hide the loader
+                    contentElement.style.display = 'block';  // Show the content
+                }, 1000);  // 1-second fake delay
+            });
+        });
+        document.querySelectorAll('.quote-btn').forEach(button => {
+    button.addEventListener('click', function (e) {
+        let ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        this.appendChild(ripple);
+
+        let x = e.clientX - this.offsetLeft;
+        let y = e.clientY - this.offsetTop;
+
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+
+        setTimeout(() => ripple.remove(), 600); // Remove after animation
+    });
+});
+
+    </script>
+</body>
+</html>

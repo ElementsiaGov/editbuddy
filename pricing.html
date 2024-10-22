@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EditBuddy - Pricing</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Common Styles -->
+    <link rel="stylesheet" href="homepage.css"> <!-- Homepage Styles -->
+    <link rel="stylesheet" href="loading.css"> <!-- Loading Styles -->
+    <link rel="stylesheet" href="services.css"> <!-- Services Styles -->
+    <link rel="stylesheet" href="mobile.css"> <!-- Services Styles -->
+    <link rel="stylesheet" href="pricing.css"> <!-- Loading Styles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script> <!-- Lottie Web Player -->
+    <link rel="icon" href="https://i.ibb.co/TwkwS0D/EDITBUDDY-3-removebg-preview.png" type="image/png">
+    <!-- Icon Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script> <!-- Font Awesome CDN -->
+</head>
+<body>
+
+    <!-- Loading Screen with Lottie -->
+    <div id="lottie-loader" class="loader-wrapper"></div>
+
+    <!-- Main Content -->
+    <div class="content" style="display: none;"> <!-- Hidden by default -->
+
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="email">
+                <img src="https://i.ibb.co/ySKrfjQ/envelope.png" alt="envelope" width="16" height="16">
+                <a href="mailto:info@editbuddy.co.za?subject=I have an enquiry" class="email-link">info@editbuddy.co.za</a>
+            </div>
+            <div class="top-bar-buttons">
+                <button class="btn" onclick="location.href='login.html'">
+                    <img src="https://i.ibb.co/ypRGKd0/arrow-left-to-arc.png" alt="myEditBuddy icon" width="16" height="16">
+                    myEditBuddy
+                </button>
+                <button class="btn" onclick="location.href='contact-us.html'">Contact Us</button>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://i.ibb.co/cwhcXGD/EDITBUDDY-1-removebg-preview.png" alt="EditBuddy Logo" width="150">
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">myEditBuddy</a>
+            </div>
+        </nav>
+        <!-- Full-width Header Image -->
+<header class="header-image">
+    <img src="https://th.bing.com/th/id/R.fc0bbd1ac54a90f92cb5bb28509f6b1f?rik=zeIOb5FUov83hQ&pid=ImgRaw&r=0" alt="Header Image">
+</header>
+<h2 class="centered-heading">Flexible Financing Options</h2>
+
+<!-- Financing Options Section -->
+<!-- Financing Options Section -->
+<section class="financing-section">
+    <div class="financing-container">
+        <!-- Pay After Launch -->
+        <div class="financing-box" style="border-top: 4px solid #424242;">
+            <h3>Pay After Launch</h3>
+            <p>Ideal for clients who want to start their project without upfront costs.</p>
+            <div class="price">R0<span> upfront</span></div>
+            <p>GET STARTED NOW, PAY LATER</p>
+            <ul>
+                <li>Custom payment plans after website launch</li>
+                <li>Flexible terms up to 6 months</li>
+                <li>Support & maintenance included</li>
+            </ul>
+            <a href="payments.html"><button class="financing-btn btn-dark">
+                <img src="https://i.ibb.co/k3tn8FH/angle-circle-left.png" alt="icon" class="icon"> Apply Now
+            </button></a>
+        </div>
+
+        <!-- Split Payments Plan -->
+        <div class="financing-box" style="border-top: 4px solid #ffc107;">
+            <h3>Split Payments Plan</h3>
+            <p>Spread the cost of your website across several months.</p>
+            <div class="price">R500<span>/mo</span></div>
+            <p>Split into 3 or 6 months</p>
+            <ul>
+                <li>Monthly installments with no hidden fees</li>
+                <li>Flexible payment terms</li>
+                <li>Discounts on early payments</li>
+            </ul>
+            <a href="payments.html"><button class="financing-btn btn-yellow">
+                <img src="https://i.ibb.co/k3tn8FH/angle-circle-left.png" alt="icon" class="icon"> Get Started
+            </button></a>
+        </div>
+
+        <!-- Custom Financing Plan -->
+        <div class="financing-box" style="border-top: 4px solid #f44336;">
+            <h3>Custom Financing</h3>
+            <p>Tailored financing options based on your project needs.</p>
+            <div class="price">Customizable</div>
+            <p>Tailored to your business</p>
+            <ul>
+                <li>Custom payment schedules</li>
+                <li>Payment terms based on project scope</li>
+                <li>Includes support and add-ons</li>
+            </ul>
+            <a href="payments.html"><button class="financing-btn btn-red">
+                <img src="https://i.ibb.co/k3tn8FH/angle-circle-left.png" alt="icon" class="icon"> Request Custom Plan
+            </button></a>
+        </div>
+
+        <!-- Early Bird Discount Plan -->
+        <div class="financing-box" style="border-top: 4px solid #3f51b5;">
+            <h3>Early Bird Discount</h3>
+            <p>Receive discounts by paying upfront before project delivery.</p>
+            <div class="price">Save 15%</div>
+            <p>Pay upfront, save more</p>
+            <ul>
+                <li>Discount on the total project cost</li>
+                <li>Priority support and faster delivery</li>
+                <li>No additional fees</li>
+            </ul>
+            <a href="payments.html"><button class="financing-btn btn-blue">
+                <img src="https://i.ibb.co/k3tn8FH/angle-circle-left.png" alt="icon" class="icon"> Get Early Bird Deal
+            </button></a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- Call to Action Section -->
+<section class="cta-section">
+    <h2>Ready to Start Your Project?</h2>
+    <p>Let’s work together to create something great. Get your personalized quote now!</p>
+    <a href="quote.html" class="cta-btn">
+        <img src="https://i.ibb.co/k3tn8FH/angle-circle-left.png" alt="quote icon" class="quote-icon"> Get a Quote
+    </a>
+</section>
+
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:info@editbuddy.co.za">info@editbuddy.co.za</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <p><a href="https://editbuddy.co.za" target="_blank">editbuddy.co.za</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p><a href="tel:0662167896">0662167896</a></p>
+                    </div>
+                </div>
+                <hr class="divider">
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Socials</h3>
+                        <ul>
+                            <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i> Tiktok</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Accessibility</h3>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-universal-access"></i> Accessibility Options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Language</h3>
+                        <ul>
+                            <li><a href="#" id="afrikaans"><img src="https://flagcdn.com/w20/za.png" class="flag-icon" alt="Afrikaans Flag"> Afrikaans</a></li>
+                            <li><a href="#" id="english"><img src="https://flagcdn.com/w20/gb.png" class="flag-icon" alt="English Flag"> English</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="divider">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 EditBuddy. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript for Lottie Loader and Menu -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const menuToggle = document.querySelector('.menu-toggle');
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('change');
+        }
+
+        // Loading screen with Lottie animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const loaderElement = document.getElementById('lottie-loader');
+            const contentElement = document.querySelector('.content');
+            lottie.loadAnimation({
+                container: loaderElement,
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://lottie.host/79666e07-c7ba-48e9-8c8f-4555c8e387d6/worGPr1Yfv.json'
+            });
+
+            window.addEventListener('load', function () {
+                setTimeout(function () {
+                    loaderElement.style.display = 'none';
+                    contentElement.style.display = 'block';
+                }, 1000);
+            });
+        });
+    </script>
+
+</body>
+</html>

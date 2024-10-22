@@ -20,4 +20,20 @@
           }, 1000);  // Fake 1-second delay
       });
   });
+// Scroll animation for services section
+document.addEventListener('DOMContentLoaded', function () {
+    const services = document.querySelectorAll('.service');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    services.forEach(service => {
+        observer.observe(service);
+    });
+});
 

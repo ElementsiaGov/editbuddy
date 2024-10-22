@@ -1,0 +1,100 @@
+/* General Section Styling */
+.payment-steps {
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: rgb(252, 252, 252);
+}
+
+.section-heading {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Order Type Styling */
+.order-type {
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    border-left: 4px solid #333;
+}
+
+.order-type h3 {
+    font-size: 28px;
+    color: #424242;
+    margin-bottom: 15px;
+}
+
+.order-type p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.order-type ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.order-type ul li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+/* Custom checkmark for list items */
+.order-type ul li::before {
+    content: '✔';
+    color: #4caf50;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Action Button Styling */
+.action-btn {
+    background-color: #ffbd59;
+    color: #333;
+    border: none;
+    padding: 15px 40px; /* Increased padding for better touch targets */
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px; /* Space between button and content */
+}
+
+.action-btn:hover {
+    background-color: #d79a3f;
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+    .payment-steps {
+        padding: 20px 10px;
+    }
+
+    .order-type {
+        padding: 20px;
+        border-left: 3px solid #333;
+    }
+
+    .action-btn {
+        width: 100%; /* Full width on mobile */
+        padding: 15px;
+    }
+}

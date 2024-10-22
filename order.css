@@ -1,0 +1,15 @@
+/* Center the form container */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Ensure the iframe (Google Form) is centered and responsive */
+.contact-section iframe {
+    max-width: 100%;
+    width: 100%; /* You can adjust this width as per your requirement */
+    height: 1000px;
+    border: none;
+}
